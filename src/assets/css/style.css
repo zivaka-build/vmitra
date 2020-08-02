@@ -1,0 +1,282 @@
+* {
+  outline: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Top Bar */
+.top-bar {
+  height: 50px;
+  background-color: #fffffa;
+}
+
+.top-bar p {
+  padding-top: 1rem;
+}
+
+.social-icons i {
+  font-size: 35px;
+  color: #525152;
+}
+
+.social-icons {
+  padding-top: 0.5rem;
+}
+
+/* Top Bar Ends */
+
+/* Navbar Styles */
+
+nav {
+  background-color: #f8f6f3;
+}
+
+.navbar-image {
+  width: 20rem;
+  height: 4rem;
+}
+
+nav img {
+  margin-left: 2rem;
+}
+
+nav ul li a {
+  font-size: 1.2rem;
+  margin-right: 1rem;
+}
+
+@media only screen and (max-width: 990px) {
+  nav ul li a {
+    font-size: 1rem;
+  }
+  .navbar-image {
+    width: 15rem;
+    height: 3rem;
+  }
+  .nav-height {
+    height: 80px;
+  }
+  nav img {
+    margin-left: 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  nav ul li a {
+    font-size: 1rem;
+  }
+  .navbar-image {
+    width: 12rem;
+  }
+}
+/* Navbar Ends */
+
+.homepage ul li {
+  list-style: none;
+}
+
+.homepage ul li p {
+  font-size: 16px;
+}
+
+.blog-container {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  background-color: #fffffa;
+}
+
+.main-blog-content {
+  background-color: #fff;
+  padding-top: 1rem;
+}
+
+.blog-container .recent-posts {
+  background-color: #fff;
+  padding-top: 1rem;
+  padding-left: 2rem;
+}
+
+.blog-container article img {
+  max-width: 100%;
+  height: auto;
+  margin: 13px auto;
+}
+
+.blog-container .recent-posts li a {
+  color: #cb0e01;
+}
+
+.blog-container .categories li a {
+  /* color: #cb0e01; */
+  color: #525152;
+}
+
+.blog-container .categories {
+  /* margin-top: 2rem; */
+  padding-left: 2rem;
+  background-color: #fff;
+  padding-top: 1rem;
+}
+
+.blog-container h3.blog-post-title {
+  font-weight: 350 !important;
+  font-size: 1.8rem;
+}
+
+.blog-container .recent-posts ul li {
+  padding: 5px 0;
+}
+
+.blog-container .categories ul li {
+  padding: 5px 0;
+}
+
+.testimonial {
+  background-color: #aeadae;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+@media (max-width: 968px) {
+  .blog-container .recent-posts {
+    display: none;
+  }
+  .blog-container .categories {
+    display: none;
+  }
+}
+
+/* Recent Posts and Categories Page */
+
+.blogs-container {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  background-color: #fffffa;
+}
+
+.blogs-container .recent-posts {
+  background-color: #fff;
+  padding-top: 1rem;
+  padding-left: 2rem;
+}
+
+.blogs-container .categories {
+  padding-top: 1rem;
+  padding-left: 2rem;
+  background-color: #fff;
+}
+
+.blogs-container .recent-posts ul li {
+  padding: 5px 0;
+}
+
+h2.blog-post-title {
+  font-weight: 350 !important;
+  font-size: 1.8rem;
+}
+
+.blogs-container .categories ul li {
+  padding: 5px 0;
+}
+
+.blogs-container .recent-posts li a {
+  color: #525152;
+  font-size: 20px;
+}
+
+.blogs-container .categories li a {
+  color: #525152;
+  font-size: 20px;
+}
+
+/* Recent Posts and Categories Page */
+
+#contact {
+  margin: 2rem 0;
+}
+
+#contact button {
+  border-radius: 30px;
+  width: 110px;
+  height: 45px;
+  font-size: 21px;
+  background-color: #32373c;
+  outline: none;
+  border: none;
+}
+
+/* Footer Styles */
+.footer {
+  margin-top: 2rem;
+}
+
+.copyright-area {
+  background-color: #272627;
+  padding: 15px 0 5px 0;
+  color: #fff;
+}
+
+#main-footer {
+  background-color: #707070;
+}
+
+/* Footer Styles Ends */
+
+/* BlogListing Page */
+
+.bloglist .bloglist-heading {
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+.bloglist .bloglist-intro,
+.bloglist-author,
+.bloglist-date {
+  font-size: 1rem;
+}
+
+.bloglist .bloglist-card {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  padding: 1rem;
+  margin-top: 1rem;
+}
+
+.bloglist .bloglist-card span a {
+  color: black;
+}
+
+@media (max-width: 968px) {
+  .bloglist .bloglist-heading {
+    font-size: 1rem;
+  }
+  .bloglist .bloglist-intro,
+  .bloglist-author,
+  .bloglist-date {
+    font-size: 0.8rem;
+  }
+}
+
+.quissa-btn {
+  color: #fff;
+  background-color: #6c757d;
+  border-color: #6c757d;
+  padding: 1rem 1rem;
+  border-radius: 5px;
+  font-size: 14px;
+  text-decoration: none;
+  text-align: none;
+}
+
+.quissa-btn:hover {
+  color: #fff;
+  text-decoration: none;
+  background-color: #5a6268;
+  border-color: #545b62;
+}
+
+@media (max-width: 400px) {
+  .quissa-btn {
+    font-size: 11px;
+  }
+}
