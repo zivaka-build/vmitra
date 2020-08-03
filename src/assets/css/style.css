@@ -94,18 +94,16 @@ nav ul li a {
 .blog-container .recent-posts {
   background-color: #fff;
   padding-top: 1rem;
-  padding-left: 2rem;
+  padding-left: 0rem;
 }
 
 .blog-container article img {
   max-width: 100%;
-  height: auto;
-  margin: 13px auto;
+  height: 200px;
+  margin: 60px auto;
 }
 
-.blog-container .recent-posts li a {
-  color: #cb0e01;
-}
+
 
 .blog-container .categories li a {
   /* color: #cb0e01; */
@@ -114,7 +112,8 @@ nav ul li a {
 
 .blog-container .categories {
   /* margin-top: 2rem; */
-  padding-left: 2rem;
+  padding-left: 0
+  ;
   background-color: #fff;
   padding-top: 1rem;
 }
@@ -125,11 +124,11 @@ nav ul li a {
 }
 
 .blog-container .recent-posts ul li {
-  padding: 5px 0;
+  padding: 0px 0;
 }
 
 .blog-container .categories ul li {
-  padding: 5px 0;
+  padding: 0px 0;
 }
 
 .testimonial {
@@ -158,7 +157,7 @@ nav ul li a {
 .blogs-container .recent-posts {
   background-color: #fff;
   padding-top: 1rem;
-  padding-left: 2rem;
+  padding-left: 0rem;
 }
 
 .blogs-container .categories {
@@ -176,8 +175,13 @@ h2.blog-post-title {
   font-size: 1.8rem;
 }
 
+h3.blog-post-title {
+  font-weight: 350 !important;
+  font-size: 1.8rem;
+}
+
 .blogs-container .categories ul li {
-  padding: 5px 0;
+  padding: 0px 0;
 }
 
 .blogs-container .recent-posts li a {
@@ -187,7 +191,7 @@ h2.blog-post-title {
 
 .blogs-container .categories li a {
   color: #525152;
-  font-size: 20px;
+  font-size: 15px;
 }
 
 /* Recent Posts and Categories Page */
@@ -280,3 +284,8 @@ h2.blog-post-title {
     font-size: 11px;
   }
 }
+
+
+.leftcol{float:left; width:50%;}
+.rightcol{float:left; width:50%;}
+.clear{clear:both; display:block;}

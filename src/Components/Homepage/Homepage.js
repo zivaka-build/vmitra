@@ -30,46 +30,30 @@ class Homepage extends React.Component {
           <div className="row">
             <div className="col-lg-7 col-xs 12 main-blog-content container">
               <article className="homepage">
-                <header>
-                  <h2 className="blog-post-title">Home</h2>
-                </header>
+                
                 <figure>
-                  <p className="text-center">
+                  <div className="cf">
+                  <div className="leftcol">
                     <img
                       src={this.state.base_url + this.state.displaypic}
                       alt="blog-dp"
                     />
-                  </p>
+                  </div>
+                  <div classname="rightcol">
+                  <p className="text-center">Yarns to spins and stories to tell!</p>
+                  <p className="text-center">Jottings of life sketches, the way I see it and connect</p>
+                  <p className="text-center">The raconteur, jotter, rambler, muser!</p>
+                  <p className="text-center">Sharing ins and outs, odds and bends, whatnots, anecnotes,
+                      points of view! Believe in miracles, an eternal optimist,
+                      love laughter joie de vivre…</p>
+                  <p className="text-center">~ Vibha Mitra ~ The Sutradhar</p>
+                      </div>
+                      <div class="clear"></div>
+                      </div>
+                      
                   {/* <figcaption>Caption for the image</figcaption> */}
                 </figure>
-                <ul>
-                  <li>
-                    <p className="text-center">
-                      Yarns to spins and stories to tell!
-                    </p>
-                  </li>
-                  <li>
-                    <p className="text-center">
-                      Jottings of life sketches, the way I see it and connect
-                      the dots!
-                    </p>
-                  </li>
-                  <li>
-                    <p className="text-center">
-                      The raconteur, jotter, rambler, muser!
-                    </p>
-                  </li>
-                  <li>
-                    <p className="text-center">
-                      Sharing ins and outs, odds and bends, whatnots, anecnotes,
-                      points of view! Believe in miracles, an eternal optimist,
-                      love laughter joie de vivre…
-                    </p>
-                  </li>
-                  <li>
-                    <p className="text-center">~ Vibha Mitra ~ The Sutradhar</p>
-                  </li>
-                </ul>
+                
               </article>
             </div>
             <Sidebar />
