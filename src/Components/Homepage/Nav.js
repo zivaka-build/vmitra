@@ -4,6 +4,7 @@ import React from "react";
 class Nav extends React.Component {
   render() {
     return (
+      <div className="sticky-top">
       <nav className="navbar navbar-expand-lg navbar-light">
         <a className="navbar-brand" href="/">
           <img
@@ -48,6 +49,7 @@ class Nav extends React.Component {
           </ul>
         </div>
       </nav>
+      </div>
     );
   }
 }

@@ -19,7 +19,10 @@ class Homepage extends React.Component {
         const createdAt = new Date(Date.parse(created_at)).toDateString();
         return { displayText, createdAt };
       });*/
-      this.setState({ displaypic: data.displaypic.url });
+      const {
+       intro
+      } = data;
+      this.setState({ displaypic: data.displaypic.url, intro });
     });
   }
 
@@ -40,13 +43,8 @@ class Homepage extends React.Component {
                     />
                   </div>
                   <div classname="rightcol">
-                  <p className="text-center">Yarns to spins and stories to tell!</p>
-                  <p className="text-center">Jottings of life sketches, the way I see it and connect</p>
-                  <p className="text-center">The raconteur, jotter, rambler, muser!</p>
-                  <p className="text-center">Sharing ins and outs, odds and bends, whatnots, anecnotes,
-                      points of view! Believe in miracles, an eternal optimist,
-                      love laughter joie de vivre…</p>
-                  <p className="text-center">~ Vibha Mitra ~ The Sutradhar</p>
+                  <p className="text-center">{ this.state.intro }</p>
+                  
                       </div>
                       <div class="clear"></div>
                       </div>
