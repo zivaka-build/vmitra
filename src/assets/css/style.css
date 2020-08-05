@@ -112,8 +112,7 @@ nav ul li a {
 
 .blog-container .categories {
   /* margin-top: 2rem; */
-  padding-left: 0
-  ;
+  padding-left: 2.3rem;
   background-color: #fff;
   padding-top: 1rem;
 }
@@ -125,6 +124,11 @@ nav ul li a {
 
 .blog-container .recent-posts ul li {
   padding: 0px 0;
+}
+dl, ol, ul {
+  margin-top: 0;
+  margin-left: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 .blog-container .categories ul li {
