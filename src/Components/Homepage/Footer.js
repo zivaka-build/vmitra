@@ -20,6 +20,8 @@ class Footer extends React.Component {
     return (
       <div>
         {/* FOOTER */}
+        <div className="redline"></div>
+        <div className="greyline"></div>
         <footer id="main-footer" className="py-3 text-white">
           <div className="container">
             <div className="row text-center">
@@ -35,12 +37,12 @@ class Footer extends React.Component {
               <div className="col-sm-12 col-xs-12 col-md-6 col-lg-6">
                 <ul className="nav navbar">
                   <li className="nav-items active">
-                    <a href="/blogs" className="nav-link text-light font-monte">
+                    <a href="/blogs" id="flinks" className="nav-link text-dark font-monte">
                       Blogs
                     </a>
                   </li>
                   <li className="nav-items">
-                    <a href="/qissa" className="nav-link text-light font-monte">
+                    <a href="/qissa"  className="nav-link text-dark font-monte">
                       Qissaa Buddy
                     </a>
                   </li>
@@ -48,16 +50,16 @@ class Footer extends React.Component {
                     <a
                       href="/about"
                       rel="noopener noreferrer"
-                      className="nav-link text-light font-monte"
+                      className="nav-link text-dark font-monte"
                     >
                       About Me
                     </a>
                   </li>
-                  <li className="nav-items">
+                  <li className="nav-items" id="flinks">
                     <a
                       href="/contact"
                       rel="noopener noreferrer"
-                      className="nav-link text-light font-monte"
+                      className="nav-link text-dark font-monte"
                     >
                       Contact
                     </a>

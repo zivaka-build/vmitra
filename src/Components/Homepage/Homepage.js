@@ -31,26 +31,21 @@ class Homepage extends React.Component {
       <section className="blog-container container">
         <div className="container mt-2">
           <div className="row">
-            <div className="col-lg-7 col-xs 12 main-blog-content container">
+            <div className="col-xs-12 col-lg-8 main-blog-content">
               <article className="homepage">
                 
-                <figure>
-                  <div className="cf">
-                  <div className="leftcol">
-                    <img
+              
+                  <div className="row">
+                  <div className="col-xs-12 col-sm-12 col-lg-4 text-center">
+                    <img 
                       src={this.state.base_url + this.state.displaypic}
-                      alt="blog-dp"
+                      alt="blog-dp" 
                     />
                   </div>
-                  <div classname="rightcol">
+                  <div className="col-xs-12 col-sm-12 col-lg-8 mt-auto mb-auto text">
                   <p className="text-center">{ this.state.intro }</p>
-                  
-                      </div>
-                      <div class="clear"></div>
-                      </div>
-                      
-                  {/* <figcaption>Caption for the image</figcaption> */}
-                </figure>
+                  </div>
+                </div>
                 
               </article>
             </div>
