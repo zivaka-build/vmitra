@@ -3,7 +3,7 @@ import React from "react";
 import axios from "axios";
 
 import Sidebar from "./../Homepage/Sidebar";
-
+import RecentPost from "./../RecentPost"
 class Homepage extends React.Component {
   state = {
     categories: [],
@@ -45,10 +45,17 @@ class Homepage extends React.Component {
                   <div className="col-xs-12 col-sm-12 col-lg-8 mt-auto mb-auto text">
                   <p className="text-center">{ this.state.intro }</p>
                   </div>
+                  <div className="col-xs-12 col-sm-12 col-lg-12 mt-auto mb-auto text">
+                  <RecentPost id="3"/>
+                  </div>
+                 
                 </div>
                 
+              
               </article>
+             
             </div>
+           
             <Sidebar />
           </div>
         </div>

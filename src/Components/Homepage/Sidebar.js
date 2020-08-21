@@ -71,7 +71,7 @@ class Sidebar extends React.Component {
                     </ul>
                 </div> */}
         <div className="container categories">
-          <h3 className="blog-post-title">Category</h3>
+          <h3 className="blog-post-title">Categories</h3>
           <hr />
           <ul>
             {this.state.categories.map((category) => (
