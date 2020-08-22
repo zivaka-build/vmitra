@@ -50,7 +50,14 @@ class AboutMe extends React.Component {
     return (
       <div className="container py-3">
         <ReactMarkdown
-          source={replaceAll(this.state.Education, "\n", "<br />")}
+          source={replaceAll(this.state.SkillSets, "\n", "<br />")}
+          escapeHtml={false}
+          transformImageUri={(uri) =>
+            uri.startsWith("http") ? uri : `${this.state.base_url}${uri}`
+          }
+        />
+         <ReactMarkdown
+          source={replaceAll(this.state.OngoingActivities, "\n", "<br />")}
           escapeHtml={false}
           transformImageUri={(uri) =>
             uri.startsWith("http") ? uri : `${this.state.base_url}${uri}`
@@ -64,20 +71,13 @@ class AboutMe extends React.Component {
           }
         />
         <ReactMarkdown
-          source={replaceAll(this.state.OngoingActivities, "\n", "<br />")}
+          source={replaceAll(this.state.Education, "\n", "<br />")}
           escapeHtml={false}
           transformImageUri={(uri) =>
             uri.startsWith("http") ? uri : `${this.state.base_url}${uri}`
           }
         />
-        <ReactMarkdown
-          source={replaceAll(this.state.SkillSets, "\n", "<br />")}
-          escapeHtml={false}
-          transformImageUri={(uri) =>
-            uri.startsWith("http") ? uri : `${this.state.base_url}${uri}`
-          }
-        />
-      </div>
+        </div>
     );
   }
 }
