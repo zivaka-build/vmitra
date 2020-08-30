@@ -1,6 +1,8 @@
 import React from "react";
 import axios from "axios";
 import { Link,navigate } from "@reach/router";
+var arraySort = require('array-sort');
+
 
 class RecentPost extends React.Component {
     state = {
@@ -22,6 +24,8 @@ class RecentPost extends React.Component {
               return { title, createdAt, post_date, id, Media, hashtag, blog_intro };
             });
             this.setState({ posts });
+            const sortPosts = arraySort(this.state.posts, "post_date").reverse();
+            this.setState({ posts:sortPosts });
           })
           .catch(console.error);
       }  

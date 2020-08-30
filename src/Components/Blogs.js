@@ -2,6 +2,7 @@ import React /* , { Fragment } */ from "react";
 import axios from "axios";
 import { Link, navigate } from "@reach/router";
 
+
 import Nav from "./Homepage/Nav";
 import TopBar from "./Homepage/TopBar";
 import Footer from "./Homepage/Footer";
@@ -21,7 +22,7 @@ const Blogs = () => {
     </React.Fragment>
   );
 };
-
+var arraySort = require('array-sort');
 class Content extends React.Component {
   state = {
     categories: [],
@@ -42,6 +43,8 @@ class Content extends React.Component {
           return { title, createdAt, post_date, id, Media, hashtag, blog_intro };
         });
         this.setState({ posts });
+        const sortPosts = arraySort(this.state.posts, "post_date").reverse();
+        this.setState({ posts:sortPosts });
       })
       .catch(console.error);
   }
