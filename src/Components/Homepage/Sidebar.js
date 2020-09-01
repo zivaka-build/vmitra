@@ -46,7 +46,7 @@ class Sidebar extends React.Component {
     /* console.log(this.state.categories); */
     
     return (
-      <div className="col-lg-4">
+      <div className="sidebar col-lg-4">
         {/* <div className="container recent-posts">
                     <h3 className="blog-post-title">Recent Posts</h3>
                     <hr />

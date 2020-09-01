@@ -3,7 +3,7 @@ import React from "react";
 import axios from "axios";
 
 import Sidebar from "./../Homepage/Sidebar";
-import RecentPost from "./../RecentPost"
+import RecentPostSmall from "./../RecentPostSmall"
 
 const ReactMarkdown = require("react-markdown/with-html");
 function replaceAll(string, search, replace) {
@@ -36,7 +36,7 @@ class Homepage extends React.Component {
 
   render() {
     return (
-      <div className="bloglist container  my-5">
+      <div className="bloglist container ">
       <section className="blog-container container">
         <div className="container mt-2">
           <div className="row">
@@ -63,9 +63,7 @@ class Homepage extends React.Component {
                   }
                 />
                   </div>
-                  <div className="col-xs-12 col-sm-12 col-lg-12 mt-auto mb-auto text">
-                  <RecentPost id="3"/>
-                  </div>
+                 
                  
                 </div>
                 
@@ -74,7 +72,16 @@ class Homepage extends React.Component {
              
             </div>
            
+            <div className="col-lg-4">
             <Sidebar />
+            <div className="row">
+            
+            
+            <div className="col-lg-12">
+            <RecentPostSmall id="3"/>
+            </div>
+            </div>
+            </div>
           </div>
         </div>
       </section>

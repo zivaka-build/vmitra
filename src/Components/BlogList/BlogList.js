@@ -1,6 +1,7 @@
 import React from "react";
 import axios from "axios";
 import { Link } from "@reach/router";
+var arraySort = require('array-sort');
 
 class BlogList extends React.Component {
   state = {
@@ -22,6 +23,8 @@ class BlogList extends React.Component {
         });
         const { name, displayText } = data;
         this.setState({ blogs, name, displayText });
+        const sortBlogs = arraySort(this.state.blogs, "post_date").reverse();
+            this.setState({ posts:sortBlogs });
       })
       .catch(console.error);
   }

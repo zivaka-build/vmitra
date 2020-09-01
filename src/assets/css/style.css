@@ -110,7 +110,13 @@ nav ul li a {
 }
 
 
+.blogs-container .categories ul li {
+  list-style: none;
+}
 
+.blog-container .categories ul li {
+  list-style: none;
+}
 
 .blog-container .categories li a {
   /* color: #cb0e01; */
@@ -119,7 +125,7 @@ nav ul li a {
 
 .blog-container .categories {
   /* margin-top: 2rem; */
-  padding-left: 2.3rem;
+  padding-left: 1.0rem;
   background-color: #fff;
   padding-top: 1rem;
 }
@@ -310,7 +316,15 @@ h3.blog-post-title {
   }
 }
 
+@media (min-width: 992px){
+.sidebar {
+max-width: 100%;
+}
+}
 
+.small-recent-posts {
+  padding-left: 2.0rem;
+}
 
 
 
