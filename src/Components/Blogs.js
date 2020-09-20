@@ -29,15 +29,21 @@ class Content extends React.Component {
     base_url: "http://34.69.57.206:1337",
     displaypic: "",
     posts: [],
+    visible: 10,
   };
+
+  loadmore = this.loadmore.bind(this)
+    
+  
 
   componentDidMount() {
     
     axios
-      .get("http://34.69.57.206:1337/bloglists/4")
+      .get("http://34.69.57.206:1337/blogs")
       .then(({ data }) => {
         console.log("blogs", data);
-        const posts = data.blogs.map((blog) => {
+        
+        const posts = data.map((blog) => {
           const { title, post_date, id, Media, hashtag, blog_intro} = blog;
           const createdAt = new Date(Date.parse(post_date)).toDateString();
           return { title, createdAt, post_date, id, Media, hashtag, blog_intro };
@@ -47,6 +53,12 @@ class Content extends React.Component {
         this.setState({ posts:sortPosts });
       })
       .catch(console.error);
+  }
+
+  loadmore(){
+    this.setState((old)=>{
+      return {visible: old.visible + 10}
+    })
   }
 
   render() {
@@ -60,14 +72,16 @@ class Content extends React.Component {
               <div className="container recent-posts">
                 <h2 className="blog-post-title">Recent Posts</h2>
                 <hr />
-                {this.state.posts.map((post) => (
+                {this.state.posts.slice(0,this.state.visible).map((post) => (
             <div className="col-12 col-md-8 bloglist-card">
               <div className="row">
+                
                 <div className="col-3">
+                  
                   <a href>
                     <img
                       className="img-fluid"
-                      src={this.state.base_url + post.Media[0].formats.thumbnail.url}
+                      src={this.state.base_url + post.Media[0].url}
                       alt={post.Media[0].name}
                     />
                   </a>
@@ -97,7 +111,14 @@ class Content extends React.Component {
               </div>
              </div>
               ))}
+              <hr />
+              <div className="text-center">
+              { this.state.visible <= this.state.posts.length &&
+              <button type="button" onClick={this.loadmore} className="btn btn-secondary">Load More</button>
+              }
               </div>
+              </div>
+              
             </div>
             <Sidebar />
             
