@@ -16,6 +16,9 @@ class Homepage extends React.Component {
     base_url: "http://34.69.57.206:1337",
     displaypic: "",
     intro: "",
+    contentwriting:"",
+    and:"",
+    qissaabuddy:"",
     posts: [],
   };
 
@@ -28,9 +31,12 @@ class Homepage extends React.Component {
       });*/
       const root = "http://35.184.242.240:1337";
       const {
-       intro
+       intro,
+       contentwriting,
+       and,
+       qissaabuddy,
       } = data;
-      this.setState({ displaypic: data.displaypic.url, intro, });
+      this.setState({ displaypic: data.displaypic.url, intro, contentwriting, and, qissaabuddy });
     });
   }
 
@@ -51,7 +57,7 @@ class Homepage extends React.Component {
                       alt="blog-dp" 
                     />
                   </div>
-                  <div className="col-xs-12 col-sm-12 col-lg-8 mt-auto mb-auto text">
+                  <div className="col-xs-12 col-sm-12 col-lg-8 mt-auto mb-auto">
                   {/* <p className="text-center">{ this.state.intro }</p> */}
                   <ReactMarkdown
                   source={replaceAll(this.state.intro, "\n", "<br />")}
@@ -66,6 +72,51 @@ class Homepage extends React.Component {
                  
                  
                 </div>
+                <div className="row">
+                <div className="col-xs-12 col-sm-12 col-lg-12 mt-auto mb-auto">
+                  
+                  <ReactMarkdown 
+                  source={replaceAll(this.state.contentwriting, "\n", "<br />")}
+                  escapeHtml={false}
+                  transformImageUri={(uri) =>
+                    uri.startsWith("http")
+                      ? uri
+                      : `${this.state.base_url}${uri}`
+                  }/>
+                  <br />
+                
+                  </div>
+
+                  <div className="col-xs-12 col-sm-12 col-lg-12 mt-auto mb-auto text">
+                 
+                  <ReactMarkdown  
+                  source={replaceAll(this.state.and, "\n", "<br />")}
+                  escapeHtml={false}
+                  transformImageUri={(uri) =>
+                    uri.startsWith("http")
+                      ? uri
+                      : `${this.state.base_url}${uri}`
+                  }/>
+                  <br />
+                
+                  </div>
+
+                  <div className="col-xs-12 col-sm-12 col-lg-12 mt-auto mb-auto text">
+                 
+                  <ReactMarkdown 
+                   source={replaceAll(this.state.qissaabuddy, "\n", "<br />")}
+                  escapeHtml={false} 
+                  transformImageUri={(uri) =>
+                    uri.startsWith("http")
+                      ? uri
+                      : `${this.state.base_url}${uri}`
+                  }/>
+                  <br />
+                
+                  </div>
+                </div>
+
+                
                 
               
               </article>

@@ -1,6 +1,8 @@
 import React from "react";
 import axios from "axios";
 import { Link } from "@reach/router";
+import Sidebar from "./../Homepage/Sidebar"
+import "./../../assets/css/style.css";
 var arraySort = require('array-sort');
 
 class BlogList extends React.Component {
@@ -18,8 +20,8 @@ class BlogList extends React.Component {
       .then(({ data }) => {
         console.log(data);
         const blogs = data.blogs.map((blog) => {
-          const { id, post_date, blog_intro, title, Author, Media, hashtag } = blog;
-          return { id, post_date, blog_intro, title, Author, Media, hashtag };
+          const { id, post_date, blog_intro, title, Author, Media, hashtag, categories } = blog;
+          return { id, post_date, blog_intro, title, Author, Media, hashtag, categories };
         });
         const { name, displayText } = data;
         this.setState({ blogs, name, displayText });
@@ -32,11 +34,15 @@ class BlogList extends React.Component {
   render() {
     return (
       <div className="bloglist container my-5">
+        <section className="blogs-container container">
+        <div className="row">
+        <div className="col-lg-8 col-md-8 col-12"> 
         <h3>{this.state.displayText}</h3>
+        <hr />
         <div className="row">
           {/* BlogList Card */}
           {this.state.blogs.map((blog) => (
-            <div className="col-12 col-md-8 bloglist-card">
+            <div className="col-12 col-md-12 col-lg-12 bloglist-card">
               <div className="row">
                 <div className="col-3">
                   <a href>
@@ -76,6 +82,13 @@ class BlogList extends React.Component {
         </div>
         {/* BlogList Card Row Ends*/}
       </div>
+      <div className="col-lg-4 col-md-4 col-12">
+        <Sidebar />
+      </div>
+      </div>
+      </section>
+      </div>
+      
     );
   }
 }

@@ -21,7 +21,7 @@ class RecentPostSmall extends React.Component {
             const posts = data.blogs.map((blog) => {
               const { title, post_date, id, Media, hashtag, blog_intro} = blog;
               const createdAt = new Date(Date.parse(post_date)).toDateString();
-              return { title, createdAt, post_date, id, Media, hashtag, blog_intro };
+              return { title, createdAt, post_date, id, Media, blog_intro };
             });
             this.setState({ posts });
             const sortPosts = arraySort(this.state.posts, "post_date").reverse();
@@ -56,9 +56,9 @@ class RecentPostSmall extends React.Component {
                       <div className="col-8">
                         <p>
                           <span className="bloglist-heading">
-                            <Link to={"/blog/" + post.id}>{post.title}</Link>
+                            <Link to={"/blog/" + post.id}><h6>{post.title}</h6></Link>
                           </span>
-                          <br />
+                          
                           <span className="bloglist-intro">
                             <a href>{post.blog_intro}</a>
                           </span>
@@ -68,11 +68,7 @@ class RecentPostSmall extends React.Component {
                           </span>
                           <br /> */}
                           <span className="bloglist-date">{post.post_date}</span>
-                          <br />
-                          <span className="bloglist-intro">
-                            <a href>{post.hashtag}</a>
-                          </span>
-                          <br />
+                          
                         </p>
                       </div>
                     </div>

@@ -25,7 +25,6 @@ const Blogs = () => {
 var arraySort = require('array-sort');
 class Content extends React.Component {
   state = {
-    categories: [],
     base_url: "http://34.69.57.206:1337",
     displaypic: "",
     posts: [],
@@ -44,10 +43,12 @@ class Content extends React.Component {
         console.log("blogs", data);
         
         const posts = data.map((blog) => {
-          const { title, post_date, id, Media, hashtag, blog_intro} = blog;
+          const { title, post_date, id, Media, hashtag, blog_intro, categories } = blog;
           const createdAt = new Date(Date.parse(post_date)).toDateString();
-          return { title, createdAt, post_date, id, Media, hashtag, blog_intro };
+          return { title, createdAt, post_date, id, Media, hashtag, blog_intro, categories };
         });
+
+       
         this.setState({ posts });
         const sortPosts = arraySort(this.state.posts, "post_date").reverse();
         this.setState({ posts:sortPosts });
@@ -103,7 +104,8 @@ class Content extends React.Component {
                     <span className="bloglist-date">{post.post_date}</span>
                     <br />
                     <span className="bloglist-intro">
-                      <a href>{post.hashtag}</a>
+                      {post.categories.map((category)=> (
+                      <a href> <b>&middot;</b>  {category.name}  </a> ))}
                     </span>
                     <br />
                   </p>
