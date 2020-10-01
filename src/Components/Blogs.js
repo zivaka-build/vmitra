@@ -38,7 +38,7 @@ class Content extends React.Component {
   componentDidMount() {
     
     axios
-      .get("http://34.69.57.206:1337/blogs")
+      .get("http://34.69.57.206:1337/blogs?_sort=post_date:DESC")
       .then(({ data }) => {
         console.log("blogs", data);
         
@@ -50,8 +50,7 @@ class Content extends React.Component {
 
        
         this.setState({ posts });
-        const sortPosts = arraySort(this.state.posts, "post_date").reverse();
-        this.setState({ posts:sortPosts });
+       
       })
       .catch(console.error);
   }

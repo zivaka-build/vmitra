@@ -39,7 +39,7 @@ class RecentPostSmall extends React.Component {
                 
                   
                     <div className="small-recent-posts my-5">
-                      <h3 className="blog-post-title">Recent Posts</h3>
+                      <h3 className="blog-post-title">Highlights</h3>
                       <hr />
                       {this.state.posts.map((post) => (
                   <div className="col-12 col-md-8 bloglist-card">
